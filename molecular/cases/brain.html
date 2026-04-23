@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain PET Cases | LearningNuclearMedicine.com</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#FFFFFF;color:#1E3A52;font-size:15px;line-height:1.6}
+.nav{background:#0D1B2A;padding:0 32px;display:flex;align-items:center;height:56px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.35)}
+.nav-back{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;color:#3D6178;text-decoration:none;margin-right:20px;padding:6px 10px;border-radius:6px;transition:color 0.15s;white-space:nowrap}
+.nav-divider{width:1px;height:20px;background:rgba(255,255,255,0.08);margin-right:20px}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:15px;color:#FFFFFF;text-decoration:none;margin-right:28px;white-space:nowrap}
+.nav-logo span{color:#00B4D8}
+.nav-links{display:flex;list-style:none;gap:2px}
+.nav-links a{display:block;padding:8px 13px;font-size:12.5px;font-weight:500;color:#8BBFD4;text-decoration:none;border-radius:6px;white-space:nowrap;transition:background 0.15s,color 0.15s}
+.nav-links a:hover{background:rgba(255,255,255,0.08);color:#FFFFFF}
+.hero{background:#0D1B2A;padding:48px 56px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;pointer-events:none}
+.hero-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-family:'DM Serif Display',serif;font-size:2.2rem;color:#FFFFFF;font-weight:400;margin-bottom:10px}
+.hero-sub{font-size:14px;max-width:600px;line-height:1.65;margin-bottom:24px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px}
+.hero-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;padding:4px 12px;border-radius:100px}
+.jump-nav{background:#F4F8FB;border-bottom:1px solid #E2ECF2;padding:0 56px;display:flex;gap:0;overflow-x:auto;position:sticky;top:56px;z-index:100}
+.jump-nav a{display:block;padding:14px 18px;font-size:12.5px;font-weight:500;color:#5A7A8E;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s}
+.body-wrap{max-width:980px;margin:0 auto;padding:52px 32px 80px}
+.disease-section{margin-bottom:56px}
+.disease-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;padding-bottom:14px}
+.disease-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.disease-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#1E3A52;font-weight:400}
+.disease-desc{font-size:13px;color:#5A7A8E;line-height:1.6;margin-bottom:16px;max-width:700px}
+.sub-sections{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.sub-card{background:#F4F8FB;border:1.5px dashed #E2ECF2;border-radius:10px;padding:20px}
+.sub-label{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#D1DDE6;margin-bottom:6px}
+.sub-title{font-family:'DM Serif Display',serif;font-size:1rem;color:#1E3A52;margin-bottom:10px}
+.topic-chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 9px;border-radius:100px}
+.pitfall-card{background:#0D1B2A;border-radius:10px;padding:20px;margin-top:12px}
+.pitfall-label{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#D1DDE6;margin-bottom:6px}
+.pitfall-title{font-family:'DM Serif Display',serif;font-size:1rem;color:#FFFFFF;margin-bottom:10px}
+.pitfall-chips{display:flex;flex-wrap:wrap;gap:5px}
+.pitfall-chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 9px;border-radius:100px;background:rgba(255,255,255,0.05);color:#5A7A8E;border:1px solid rgba(255,255,255,0.08)}
+.resource-bank{background:#0D1B2A;border-radius:14px;padding:28px 32px;margin-top:48px}
+.resource-bank h3{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:18px}
+.resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.resource-link{display:flex;align-items:center;gap:8px;font-size:12.5px;text-decoration:none;padding:8px 12px;border-radius:7px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);transition:background 0.15s,color 0.15s;line-height:1.4}
+.resource-link span{opacity:0.4;font-size:11px}
+.footer{background:#060e17;padding:16px 48px;font-size:11.5px;color:#2A4A62;border-top:1px solid #0d1b2a}
+@media (max-width:700px){.hero{padding:36px 20px 32px}.jump-nav{padding:0 16px}.body-wrap{padding:36px 16px 60px}.nav-links{display:none}.sub-sections{grid-template-columns:1fr}}
+
+    .nav-back:hover{color:#38BDF8}
+    .nav-links a.active{color:#38BDF8;background:rgba(56,189,248,0.1)}
+    .hero::before{background:radial-gradient(circle,rgba(56,189,248,0.08) 0%,transparent 70%)}
+    .hero-eyebrow{color:#38BDF8}
+    .hero-tag{background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.2);color:#38BDF8}
+    .jump-nav a:hover,.jump-nav a.active{color:#38BDF8;border-color:#38BDF8}
+    .disease-header{border-bottom:2px solid #38BDF8}
+    .disease-icon{background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.2)}
+    .hero-sub{color:rgba(56,189,248,0.75)}
+    .acc-chip{background:rgba(56,189,248,0.07);color:#38BDF8;border:1px solid rgba(56,189,248,0.18)}
+    .acc-resource{color:#7AABCC}.acc-resource:hover{background:rgba(56,189,248,0.1);color:#38BDF8}
+    .resource-bank h3{color:#38BDF8}
+    </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-back">← Cases</a>
+  <div class="nav-divider"></div>
+  <a href="../../index.html" class="nav-logo">Learning<span>Nuclear</span>Medicine</a>
+  <ul class="nav-links"><li><a href="fdg.html">FDG</a></li><li><a href="dotatate.html">DOTATATE</a></li><li><a href="psma.html">PSMA</a></li><li><a href="brain.html" class="active">Brain PET</a></li></ul>
+</nav>
+<div class="hero">
+  <div class="hero-eyebrow">Brain &amp; Neurology PET</div>
+  <h1>Brain PET Cases</h1>
+  <p class="hero-sub">Organized by clinical question across all brain PET tracers — amyloid, tau, FET, FDOPA, and FDG. Cases added regularly.</p>
+  <div class="hero-tags"><span class="hero-tag">A/T/N Framework</span><span class="hero-tag">Amyloid & Tau</span><span class="hero-tag">FET / FDOPA</span><span class="hero-tag">PET/MRI</span><span class="hero-tag">Pseudoprogression</span><span class="hero-tag">Braak Staging</span><span class="hero-tag">Anti-Amyloid Therapy</span></div>
+</div>
+<div class="jump-nav"><a href="#dementia">Dementia & A/T/N</a><a href="#neurooncology">Neuro-oncology</a><a href="#movement">Movement Disorders</a><a href="#spect">Brain SPECT</a></div>
+<div class="body-wrap">
+
+  <div class="disease-section" id="dementia">
+    <div class="disease-header">
+      <div class="disease-icon">🧠</div>
+      <div class="disease-title">Dementia & A/T/N Workup</div>
+    </div>
+    <p class='disease-desc'>Alzheimer's disease is defined by biology, not symptoms. The A/T/N biomarker framework — Amyloid, Tau, Neurodegeneration — is now the basis for diagnosis, prognosis, and clinical trial eligibility.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Amyloid PET — MCI Workup</div>
+      <div class="topic-chips"><span class="chip acc-chip">Positive vs negative visual read</span><span class="chip acc-chip">Grey-white contrast loss</span><span class="chip acc-chip">Posterior cingulate & precuneus</span><span class="chip acc-chip">A/T/N framework</span><span class="chip acc-chip">Centiloid scale</span><span class="chip acc-chip">Anti-amyloid therapy eligibility</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Tau PET — Braak Staging</div>
+      <div class="topic-chips"><span class="chip acc-chip">Braak I–II: entorhinal/MTL</span><span class="chip acc-chip">Braak III–IV: inferior temporal</span><span class="chip acc-chip">Braak V–VI: neocortical spread</span><span class="chip acc-chip">Clinical severity correlation</span><span class="chip acc-chip">Flortaucipir vs MK-6240</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Amyloid + Tau Companion Cases</div>
+      <div class="topic-chips"><span class="chip acc-chip">A+T+ — Alzheimer's</span><span class="chip acc-chip">A+T- — preclinical AD</span><span class="chip acc-chip">A-T+ — primary tauopathy</span><span class="chip acc-chip">Treatment selection implications</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Negative Amyloid PET</div>
+      <div class="topic-chips"><span class="chip acc-chip">Normal aging</span><span class="chip acc-chip">Non-AD dementia</span><span class="chip acc-chip">FTD patterns on FDG</span><span class="chip acc-chip">DLB — FDG & DaT-SPECT</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Dementia Imaging Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Choroid plexus spill — tau pitfall</span><span class="pitfall-chip">White matter striations — amyloid false positive</span><span class="pitfall-chip">Age-related amyloid accumulation</span><span class="pitfall-chip">Cerebrovascular disease confounds</span><span class="pitfall-chip">Off-target flortaucipir binding</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="neurooncology">
+    <div class="disease-header">
+      <div class="disease-icon">💜</div>
+      <div class="disease-title">Neuro-oncology</div>
+    </div>
+    <p class='disease-desc'>Amino acid PET tracers (FET, FDOPA) distinguish tumor from treatment effect where MRI is equivocal. A critical clinical application where PET changes management in ~40% of cases.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">FET PET — Glioma Recurrence vs Radiation Necrosis</div>
+      <div class="topic-chips"><span class="chip acc-chip">TBRmax thresholds</span><span class="chip acc-chip">Late frame imaging 20–40 min</span><span class="chip acc-chip">Dynamic kinetics</span><span class="chip acc-chip">Ring uptake pattern</span><span class="chip acc-chip">RANO-NM criteria</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">FDOPA PET — Neuro-oncology</div>
+      <div class="topic-chips"><span class="chip acc-chip">Glioma characterization</span><span class="chip acc-chip">Striatum as reference</span><span class="chip acc-chip">TBR calculation</span><span class="chip acc-chip">Comparison with FET</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Pseudoprogression</div>
+      <div class="topic-chips"><span class="chip acc-chip">Post-Stupp protocol</span><span class="chip acc-chip">Enhancing lesion on MRI</span><span class="chip acc-chip">Early post-RT timing</span><span class="chip acc-chip">PET resolves ambiguity</span><span class="chip acc-chip">Management impact</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Treatment Planning & Biopsy Guidance</div>
+      <div class="topic-chips"><span class="chip acc-chip">Hotspot targeting</span><span class="chip acc-chip">Heterogeneous tumors</span><span class="chip acc-chip">Radiation boost planning</span><span class="chip acc-chip">Recurrence mapping</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Neuro-oncology Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Radiation necrosis can show elevated TBR</span><span class="pitfall-chip">Dynamic kinetics needed for full picture</span><span class="pitfall-chip">Cortical gray matter — high physiologic FDOPA</span><span class="pitfall-chip">Striatal uptake — always show in frame</span><span class="pitfall-chip">Low-grade glioma — FDG often normal</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="movement">
+    <div class="disease-header">
+      <div class="disease-icon">🔄</div>
+      <div class="disease-title">Movement Disorders</div>
+    </div>
+    <p class='disease-desc'>FDOPA PET characterizes presynaptic dopaminergic terminal loss, distinguishing Parkinson disease from atypical parkinsonism and essential tremor.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Parkinson Disease vs MSA</div>
+      <div class="topic-chips"><span class="chip acc-chip">Putamen-to-caudate ratio</span><span class="chip acc-chip">Posterior putamen loss first in PD</span><span class="chip acc-chip">Symmetric vs asymmetric</span><span class="chip acc-chip">MSA — more symmetric loss</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Parkinson vs Essential Tremor</div>
+      <div class="topic-chips"><span class="chip acc-chip">Normal FDOPA in ET</span><span class="chip acc-chip">Reduced putamen in PD</span><span class="chip acc-chip">Clinical impact</span><span class="chip acc-chip">DaT-SPECT comparison</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">DLB — FDOPA & FDG</div>
+      <div class="topic-chips"><span class="chip acc-chip">Occipital hypometabolism on FDG</span><span class="chip acc-chip">Reduced striatal FDOPA</span><span class="chip acc-chip">Cingulate island sign</span><span class="chip acc-chip">DaT-SPECT complement</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Movement Disorder Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Normal aging — mild putamen reduction</span><span class="pitfall-chip">Drug-induced parkinsonism — normal FDOPA</span><span class="pitfall-chip">Asymmetric tremor — unilateral reduction</span><span class="pitfall-chip">Vascular parkinsonism patterns</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="spect">
+    <div class="disease-header">
+      <div class="disease-icon">🔗</div>
+      <div class="disease-title">Brain SPECT — Cross-Reference</div>
+    </div>
+    <p class='disease-desc'>Brain SPECT cases (perfusion SPECT for dementia, seizure localization, brain death) are organized in the General Nuclear Medicine wing.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Tc-99m HMPAO/ECD Perfusion SPECT</div>
+      <div class="topic-chips"><span class="chip acc-chip">Alzheimer's — posterior pattern</span><span class="chip acc-chip">FTD — frontal pattern</span><span class="chip acc-chip">Seizure lateralization</span><span class="chip acc-chip">Brain death confirmation</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">DaT-SPECT (¹²³I-Ioflupane)</div>
+      <div class="topic-chips"><span class="chip acc-chip">Striatal uptake ratio</span><span class="chip acc-chip">PD vs ET</span><span class="chip acc-chip">Atypical parkinsonism</span><span class="chip acc-chip">Comma vs period sign</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Brain SPECT Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Patient motion artifact</span><span class="pitfall-chip">Attenuation — posterior fossa</span><span class="pitfall-chip">Medication effects on DaT</span><span class="pitfall-chip">Normal variant asymmetry</span></div>
+    </div>
+  </div>
+  <div class="resource-bank">
+    <h3>Key References &amp; Resources</h3>
+    <div class="resource-grid"><a href="https://www.alzforum.org/news/research-news/nia-aa-research-framework-toward-biological-definition-alzheimers-disease" target="_blank" class="resource-link acc-resource">NIA-AA A/T/N Research Framework <span>↗</span></a><a href="https://jnm.snmjournals.org/content/61/6/800" target="_blank" class="resource-link acc-resource">SNMMI Amyloid PET Appropriate Use <span>↗</span></a><a href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(21)00017-0/fulltext" target="_blank" class="resource-link acc-resource">Flortaucipir — Phase 3 Clinical Validation <span>↗</span></a><a href="https://radiopaedia.org/articles/fet-pet" target="_blank" class="resource-link acc-resource">Radiopaedia — FET PET <span>↗</span></a><a href="https://radiopaedia.org/articles/fdopa-pet" target="_blank" class="resource-link acc-resource">Radiopaedia — FDOPA PET <span>↗</span></a><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2212948" target="_blank" class="resource-link acc-resource">CLARITY AD — Lecanemab Trial <span>↗</span></a><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2305032" target="_blank" class="resource-link acc-resource">TRAILBLAZER-ALZ 2 — Donanemab Trial <span>↗</span></a></div>
+  </div>
+</div>
+<div class="footer">LearningNuclearMedicine.com &nbsp;·&nbsp; Brain PET Cases &nbsp;·&nbsp; For educational use only &nbsp;·&nbsp; © 2025</div>
+<script>
+const sections=document.querySelectorAll('.disease-section');
+const jumpLinks=document.querySelectorAll('.jump-nav a');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){jumpLinks.forEach(l=>l.classList.remove('active'));const a=document.querySelector(`.jump-nav a[href="#${e.target.id}"]`);if(a)a.classList.add('active')}})},{threshold:0.2});
+sections.forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>

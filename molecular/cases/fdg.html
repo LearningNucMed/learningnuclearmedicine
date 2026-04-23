@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¹⁸F-FDG PET/CT Cases | LearningNuclearMedicine.com</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#FFFFFF;color:#1E3A52;font-size:15px;line-height:1.6}
+.nav{background:#0D1B2A;padding:0 32px;display:flex;align-items:center;height:56px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.35)}
+.nav-back{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;color:#3D6178;text-decoration:none;margin-right:20px;padding:6px 10px;border-radius:6px;transition:color 0.15s;white-space:nowrap}
+.nav-divider{width:1px;height:20px;background:rgba(255,255,255,0.08);margin-right:20px}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:15px;color:#FFFFFF;text-decoration:none;margin-right:28px;white-space:nowrap}
+.nav-logo span{color:#00B4D8}
+.nav-links{display:flex;list-style:none;gap:2px}
+.nav-links a{display:block;padding:8px 13px;font-size:12.5px;font-weight:500;color:#8BBFD4;text-decoration:none;border-radius:6px;white-space:nowrap;transition:background 0.15s,color 0.15s}
+.nav-links a:hover{background:rgba(255,255,255,0.08);color:#FFFFFF}
+.hero{background:#0D1B2A;padding:48px 56px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;pointer-events:none}
+.hero-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-family:'DM Serif Display',serif;font-size:2.2rem;color:#FFFFFF;font-weight:400;margin-bottom:10px}
+.hero-sub{font-size:14px;max-width:600px;line-height:1.65;margin-bottom:24px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px}
+.hero-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;padding:4px 12px;border-radius:100px}
+.jump-nav{background:#F4F8FB;border-bottom:1px solid #E2ECF2;padding:0 56px;display:flex;gap:0;overflow-x:auto;position:sticky;top:56px;z-index:100}
+.jump-nav a{display:block;padding:14px 18px;font-size:12.5px;font-weight:500;color:#5A7A8E;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s}
+.body-wrap{max-width:980px;margin:0 auto;padding:52px 32px 80px}
+.disease-section{margin-bottom:56px}
+.disease-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;padding-bottom:14px}
+.disease-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.disease-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#1E3A52;font-weight:400}
+.disease-desc{font-size:13px;color:#5A7A8E;line-height:1.6;margin-bottom:16px;max-width:700px}
+.sub-sections{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.sub-card{background:#F4F8FB;border:1.5px dashed #E2ECF2;border-radius:10px;padding:20px}
+.sub-label{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#D1DDE6;margin-bottom:6px}
+.sub-title{font-family:'DM Serif Display',serif;font-size:1rem;color:#1E3A52;margin-bottom:10px}
+.topic-chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 9px;border-radius:100px}
+.pitfall-card{background:#0D1B2A;border-radius:10px;padding:20px;margin-top:12px}
+.pitfall-label{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#D1DDE6;margin-bottom:6px}
+.pitfall-title{font-family:'DM Serif Display',serif;font-size:1rem;color:#FFFFFF;margin-bottom:10px}
+.pitfall-chips{display:flex;flex-wrap:wrap;gap:5px}
+.pitfall-chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 9px;border-radius:100px;background:rgba(255,255,255,0.05);color:#5A7A8E;border:1px solid rgba(255,255,255,0.08)}
+.resource-bank{background:#0D1B2A;border-radius:14px;padding:28px 32px;margin-top:48px}
+.resource-bank h3{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:18px}
+.resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.resource-link{display:flex;align-items:center;gap:8px;font-size:12.5px;text-decoration:none;padding:8px 12px;border-radius:7px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);transition:background 0.15s,color 0.15s;line-height:1.4}
+.resource-link span{opacity:0.4;font-size:11px}
+.footer{background:#060e17;padding:16px 48px;font-size:11.5px;color:#2A4A62;border-top:1px solid #0d1b2a}
+@media (max-width:700px){.hero{padding:36px 20px 32px}.jump-nav{padding:0 16px}.body-wrap{padding:36px 16px 60px}.nav-links{display:none}.sub-sections{grid-template-columns:1fr}}
+
+    .nav-back:hover{color:#00B4D8}
+    .nav-links a.active{color:#00B4D8;background:rgba(0,180,216,0.1)}
+    .hero::before{background:radial-gradient(circle,rgba(0,180,216,0.08) 0%,transparent 70%)}
+    .hero-eyebrow{color:#00B4D8}
+    .hero-tag{background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.2);color:#00B4D8}
+    .jump-nav a:hover,.jump-nav a.active{color:#00B4D8;border-color:#00B4D8}
+    .disease-header{border-bottom:2px solid #00B4D8}
+    .disease-icon{background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.2)}
+    .hero-sub{color:rgba(0,180,216,0.75)}
+    .acc-chip{background:rgba(0,180,216,0.07);color:#00B4D8;border:1px solid rgba(0,180,216,0.18)}
+    .acc-resource{color:#7AABCC}.acc-resource:hover{background:rgba(0,180,216,0.1);color:#00B4D8}
+    .resource-bank h3{color:#00B4D8}
+    </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-back">← Cases</a>
+  <div class="nav-divider"></div>
+  <a href="../../index.html" class="nav-logo">Learning<span>Nuclear</span>Medicine</a>
+  <ul class="nav-links"><li><a href="fdg.html" class="active">FDG</a></li><li><a href="dotatate.html">DOTATATE</a></li><li><a href="psma.html">PSMA</a></li><li><a href="brain.html">Brain PET</a></li></ul>
+</nav>
+<div class="hero">
+  <div class="hero-eyebrow">Tracer — FDG PET/CT</div>
+  <h1>¹⁸F-FDG PET/CT Cases</h1>
+  <p class="hero-sub">The workhorse of PET imaging. Cases organized by organ system and disease process. Scroll the DICOM stack, then reveal diagnosis and teaching points.</p>
+  <div class="hero-tags"><span class="hero-tag">Deauville Scoring</span><span class="hero-tag">PERCIST</span><span class="hero-tag">Staging & Response</span><span class="hero-tag">Normal Variants</span><span class="hero-tag">Infection & Inflammation</span><span class="hero-tag">Cardiac</span></div>
+</div>
+<div class="jump-nav"><a href="#lymphoma">Lymphoma</a><a href="#lung">Lung & Thorax</a><a href="#head-neck">Head & Neck</a><a href="#gi">GI / Colorectal</a><a href="#infection">Infection & Inflammation</a><a href="#cardiac">Cardiac</a><a href="#brain">Brain</a><a href="#variants">Normal Variants</a></div>
+<div class="body-wrap">
+
+  <div class="disease-section" id="lymphoma">
+    <div class="disease-header">
+      <div class="disease-icon">🎗️</div>
+      <div class="disease-title">Lymphoma</div>
+    </div>
+    <p class='disease-desc'>FDG PET is essential for staging, interim response, and end-of-treatment assessment in lymphoma. Deauville scoring drives management decisions.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Hodgkin Lymphoma — Staging</div>
+      <div class="topic-chips"><span class="chip acc-chip">Classic mediastinal disease</span><span class="chip acc-chip">Ann Arbor staging</span><span class="chip acc-chip">Bulky disease</span><span class="chip acc-chip">B symptoms</span><span class="chip acc-chip">Baseline Deauville</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">DLBCL — Interim Response</div>
+      <div class="topic-chips"><span class="chip acc-chip">After 2 cycles R-CHOP</span><span class="chip acc-chip">Deauville 3 vs 4</span><span class="chip acc-chip">SUV reduction</span><span class="chip acc-chip">Management implications</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">End-of-Treatment Assessment</div>
+      <div class="topic-chips"><span class="chip acc-chip">Complete metabolic response</span><span class="chip acc-chip">Residual mass</span><span class="chip acc-chip">Deauville 1–5</span><span class="chip acc-chip">Next steps by score</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Lymphoma Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Thymic rebound vs recurrence</span><span class="pitfall-chip">Inflammatory nodes post-treatment</span><span class="pitfall-chip">Infection mimicking disease</span><span class="pitfall-chip">Splenic uptake patterns</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="lung">
+    <div class="disease-header">
+      <div class="disease-icon">🫁</div>
+      <div class="disease-title">Lung & Thorax</div>
+    </div>
+    <p class='disease-desc'>FDG PET for lung cancer staging, solitary pulmonary nodule characterization, and treatment response assessment.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">NSCLC — Staging</div>
+      <div class="topic-chips"><span class="chip acc-chip">T-stage assessment</span><span class="chip acc-chip">Nodal staging</span><span class="chip acc-chip">Distant metastases</span><span class="chip acc-chip">Adrenal incidentaloma</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Solitary Pulmonary Nodule</div>
+      <div class="topic-chips"><span class="chip acc-chip">SUVmax thresholds</span><span class="chip acc-chip">False positives</span><span class="chip acc-chip">Granuloma mimics</span><span class="chip acc-chip">Management algorithm</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Treatment Response</div>
+      <div class="topic-chips"><span class="chip acc-chip">PERCIST criteria</span><span class="chip acc-chip">Early response</span><span class="chip acc-chip">Pseudo-progression</span><span class="chip acc-chip">Immunotherapy patterns</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Thoracic Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Granulomatous disease</span><span class="pitfall-chip">Carcinoid tumors — variable avidity</span><span class="pitfall-chip">Post-radiation changes</span><span class="pitfall-chip">Atelectasis</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="head-neck">
+    <div class="disease-header">
+      <div class="disease-icon">🗣️</div>
+      <div class="disease-title">Head & Neck</div>
+    </div>
+    <p class='disease-desc'>HNSCC staging, unknown primary localization, and treatment response. FDG PET changes management in a significant proportion of cases.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">HNSCC — Staging</div>
+      <div class="topic-chips"><span class="chip acc-chip">Primary tumor</span><span class="chip acc-chip">Nodal staging</span><span class="chip acc-chip">Distant disease</span><span class="chip acc-chip">HPV-positive vs negative</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Unknown Primary</div>
+      <div class="topic-chips"><span class="chip acc-chip">Waldeyer's ring</span><span class="chip acc-chip">Directed biopsy</span><span class="chip acc-chip">PET-guided workup</span><span class="chip acc-chip">Bilateral nodal disease</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Post-Treatment Response</div>
+      <div class="topic-chips"><span class="chip acc-chip">12-week post-RT scan</span><span class="chip acc-chip">Residual disease</span><span class="chip acc-chip">Salvage surgery decision</span><span class="chip acc-chip">Pitfalls in irradiated field</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">H&N Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Brown fat — cervical</span><span class="pitfall-chip">Reactive nodes</span><span class="pitfall-chip">Post-surgical changes</span><span class="pitfall-chip">Vocal cord asymmetry</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="gi">
+    <div class="disease-header">
+      <div class="disease-icon">🫃</div>
+      <div class="disease-title">GI / Colorectal</div>
+    </div>
+    <p class='disease-desc'>Colorectal cancer restaging, recurrence detection, and CEA elevation workup. FDG PET detects recurrence missed by CT in a significant proportion of patients.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Colorectal Cancer Restaging</div>
+      <div class="topic-chips"><span class="chip acc-chip">Rising CEA</span><span class="chip acc-chip">Liver metastases</span><span class="chip acc-chip">Peritoneal disease</span><span class="chip acc-chip">Pre-surgical assessment</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Recurrence Detection</div>
+      <div class="topic-chips"><span class="chip acc-chip">Anastomotic recurrence</span><span class="chip acc-chip">Nodal recurrence</span><span class="chip acc-chip">Distant metastases</span><span class="chip acc-chip">CT-occult disease</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Other GI Malignancies</div>
+      <div class="topic-chips"><span class="chip acc-chip">Gastric cancer</span><span class="chip acc-chip">Esophageal cancer</span><span class="chip acc-chip">Pancreatic cancer</span><span class="chip acc-chip">GIST response</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">GI Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Physiologic bowel uptake</span><span class="pitfall-chip">Mucinous tumors — low avidity</span><span class="pitfall-chip">Peritoneal disease detection limits</span><span class="pitfall-chip">Post-surgical inflammation</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="infection">
+    <div class="disease-header">
+      <div class="disease-icon">🦠</div>
+      <div class="disease-title">Infection & Inflammation</div>
+    </div>
+    <p class='disease-desc'>FDG PET is highly sensitive for active inflammation and infection — evaluating simultaneously for occult malignancy, infection, and vasculitis.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Fever of Unknown Origin</div>
+      <div class="topic-chips"><span class="chip acc-chip">Occult malignancy</span><span class="chip acc-chip">Large vessel vasculitis</span><span class="chip acc-chip">Inflammatory bowel disease</span><span class="chip acc-chip">Infection sources</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Large Vessel Vasculitis</div>
+      <div class="topic-chips"><span class="chip acc-chip">GCA / Takayasu</span><span class="chip acc-chip">Aortic wall uptake</span><span class="chip acc-chip">Linear vs focal pattern</span><span class="chip acc-chip">Treatment response</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Cardiac & Vascular Infection</div>
+      <div class="topic-chips"><span class="chip acc-chip">Cardiac sarcoidosis</span><span class="chip acc-chip">Prosthetic valve endocarditis</span><span class="chip acc-chip">Vascular graft infection</span><span class="chip acc-chip">Device infection</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Musculoskeletal Infection</div>
+      <div class="topic-chips"><span class="chip acc-chip">Osteomyelitis</span><span class="chip acc-chip">Prosthetic joint infection</span><span class="chip acc-chip">Spondylodiscitis</span><span class="chip acc-chip">Soft tissue infection</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Infection & Inflammation Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Atherosclerosis vs vasculitis</span><span class="pitfall-chip">Post-surgical inflammation</span><span class="pitfall-chip">Physiologic marrow uptake</span><span class="pitfall-chip">Healing fractures</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="cardiac">
+    <div class="disease-header">
+      <div class="disease-icon">❤️</div>
+      <div class="disease-title">Cardiac</div>
+    </div>
+    <p class='disease-desc'>FDG PET for cardiac sarcoidosis and viability assessment. Requires specific preparation protocols to suppress physiologic myocardial uptake.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Cardiac Sarcoidosis</div>
+      <div class="topic-chips"><span class="chip acc-chip">High-fat low-carb prep</span><span class="chip acc-chip">Focal patchy uptake</span><span class="chip acc-chip">Perfusion-metabolism mismatch</span><span class="chip acc-chip">Treatment monitoring</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Myocardial Viability</div>
+      <div class="topic-chips"><span class="chip acc-chip">Hibernating myocardium</span><span class="chip acc-chip">FDG vs perfusion</span><span class="chip acc-chip">Revascularization decision</span><span class="chip acc-chip">Metabolic-flow mismatch</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Cardiac FDG Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Inadequate preparation — diffuse uptake</span><span class="pitfall-chip">Normal variant focal uptake</span><span class="pitfall-chip">Attenuation artifacts</span><span class="pitfall-chip">Patient fasting compliance</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="brain">
+    <div class="disease-header">
+      <div class="disease-icon">🧠</div>
+      <div class="disease-title">Brain</div>
+    </div>
+    <p class='disease-desc'>FDG brain PET for dementia pattern recognition. High background uptake makes interpretation challenging — see the Brain PET section for full neuro cases.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Dementia Pattern Recognition</div>
+      <div class="topic-chips"><span class="chip acc-chip">Alzheimer's pattern</span><span class="chip acc-chip">FTD patterns</span><span class="chip acc-chip">DLB pattern</span><span class="chip acc-chip">Vascular dementia</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">FDG vs Amyloid Comparison</div>
+      <div class="topic-chips"><span class="chip acc-chip">Neurodegeneration marker</span><span class="chip acc-chip">Metabolic correlates</span><span class="chip acc-chip">N in A/T/N framework</span><span class="chip acc-chip">Complementary roles</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Brain FDG Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">High background — subtle defects</span><span class="pitfall-chip">Age-related changes</span><span class="pitfall-chip">Medication effects</span><span class="pitfall-chip">Seizure — peri-ictal hypermetabolism</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="variants">
+    <div class="disease-header">
+      <div class="disease-icon">⚠️</div>
+      <div class="disease-title">Normal Variants & Pitfalls</div>
+    </div>
+    <p class='disease-desc'>The most common sources of false-positive interpretation on FDG PET. Every reader should know these cold.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Brown Adipose Tissue</div>
+      <div class="topic-chips"><span class="chip acc-chip">Cervical & supraclavicular</span><span class="chip acc-chip">Axillary & paravertebral</span><span class="chip acc-chip">Risk factors</span><span class="chip acc-chip">CT correlation — negative HU</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Thymic Rebound</div>
+      <div class="topic-chips"><span class="chip acc-chip">Post-chemotherapy</span><span class="chip acc-chip">V-shaped morphology</span><span class="chip acc-chip">Young patients</span><span class="chip acc-chip">Vs anterior mediastinal recurrence</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Physiologic Uptake Patterns</div>
+      <div class="topic-chips"><span class="chip acc-chip">Uterine — menstrual cycle</span><span class="chip acc-chip">Muscle uptake</span><span class="chip acc-chip">Bowel activity</span><span class="chip acc-chip">Renal excretion patterns</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Post-Treatment Changes</div>
+      <div class="topic-chips"><span class="chip acc-chip">Radiation pneumonitis</span><span class="chip acc-chip">Surgical sites</span><span class="chip acc-chip">Inflammatory response</span><span class="chip acc-chip">G-CSF marrow stimulation</span></div>
+    </div></div>
+    
+  </div>
+  <div class="resource-bank">
+    <h3>Key References &amp; Resources</h3>
+    <div class="resource-grid"><a href="https://www.snmmi.org/ClinicalPractice/content.aspx?ItemNumber=6414" target="_blank" class="resource-link acc-resource">SNMMI Appropriate Use Criteria — FDG PET <span>↗</span></a><a href="https://link.springer.com/article/10.1007/s00259-014-2966-4" target="_blank" class="resource-link acc-resource">Deauville Criteria — EANM Guidelines <span>↗</span></a><a href="https://jnm.snmjournals.org/content/50/1/122" target="_blank" class="resource-link acc-resource">PERCIST Response Criteria — Wahl et al <span>↗</span></a><a href="https://radiopaedia.org/articles/brown-fat-fdg-uptake" target="_blank" class="resource-link acc-resource">Radiopaedia — Brown Fat FDG Uptake <span>↗</span></a><a href="https://radiopaedia.org/articles/thymic-rebound" target="_blank" class="resource-link acc-resource">Radiopaedia — Thymic Rebound <span>↗</span></a><a href="https://acsearch.acr.org/docs/69486/Narrative/" target="_blank" class="resource-link acc-resource">ACR Appropriateness Criteria — Lymphoma <span>↗</span></a></div>
+  </div>
+</div>
+<div class="footer">LearningNuclearMedicine.com &nbsp;·&nbsp; ¹⁸F-FDG PET/CT Cases &nbsp;·&nbsp; For educational use only &nbsp;·&nbsp; © 2025</div>
+<script>
+const sections=document.querySelectorAll('.disease-section');
+const jumpLinks=document.querySelectorAll('.jump-nav a');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){jumpLinks.forEach(l=>l.classList.remove('active'));const a=document.querySelector(`.jump-nav a[href="#${e.target.id}"]`);if(a)a.classList.add('active')}})},{threshold:0.2});
+sections.forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>

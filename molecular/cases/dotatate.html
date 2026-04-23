@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⁶⁸Ga-DOTATATE PET/CT Cases | LearningNuclearMedicine.com</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#FFFFFF;color:#1E3A52;font-size:15px;line-height:1.6}
+.nav{background:#0D1B2A;padding:0 32px;display:flex;align-items:center;height:56px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.35)}
+.nav-back{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;color:#3D6178;text-decoration:none;margin-right:20px;padding:6px 10px;border-radius:6px;transition:color 0.15s;white-space:nowrap}
+.nav-divider{width:1px;height:20px;background:rgba(255,255,255,0.08);margin-right:20px}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:15px;color:#FFFFFF;text-decoration:none;margin-right:28px;white-space:nowrap}
+.nav-logo span{color:#00B4D8}
+.nav-links{display:flex;list-style:none;gap:2px}
+.nav-links a{display:block;padding:8px 13px;font-size:12.5px;font-weight:500;color:#8BBFD4;text-decoration:none;border-radius:6px;white-space:nowrap;transition:background 0.15s,color 0.15s}
+.nav-links a:hover{background:rgba(255,255,255,0.08);color:#FFFFFF}
+.hero{background:#0D1B2A;padding:48px 56px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;pointer-events:none}
+.hero-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-family:'DM Serif Display',serif;font-size:2.2rem;color:#FFFFFF;font-weight:400;margin-bottom:10px}
+.hero-sub{font-size:14px;max-width:600px;line-height:1.65;margin-bottom:24px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px}
+.hero-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;padding:4px 12px;border-radius:100px}
+.jump-nav{background:#F4F8FB;border-bottom:1px solid #E2ECF2;padding:0 56px;display:flex;gap:0;overflow-x:auto;position:sticky;top:56px;z-index:100}
+.jump-nav a{display:block;padding:14px 18px;font-size:12.5px;font-weight:500;color:#5A7A8E;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s}
+.body-wrap{max-width:980px;margin:0 auto;padding:52px 32px 80px}
+.disease-section{margin-bottom:56px}
+.disease-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;padding-bottom:14px}
+.disease-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.disease-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#1E3A52;font-weight:400}
+.disease-desc{font-size:13px;color:#5A7A8E;line-height:1.6;margin-bottom:16px;max-width:700px}
+.sub-sections{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.sub-card{background:#F4F8FB;border:1.5px dashed #E2ECF2;border-radius:10px;padding:20px}
+.sub-label{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#D1DDE6;margin-bottom:6px}
+.sub-title{font-family:'DM Serif Display',serif;font-size:1rem;color:#1E3A52;margin-bottom:10px}
+.topic-chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 9px;border-radius:100px}
+.pitfall-card{background:#0D1B2A;border-radius:10px;padding:20px;margin-top:12px}
+.pitfall-label{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#D1DDE6;margin-bottom:6px}
+.pitfall-title{font-family:'DM Serif Display',serif;font-size:1rem;color:#FFFFFF;margin-bottom:10px}
+.pitfall-chips{display:flex;flex-wrap:wrap;gap:5px}
+.pitfall-chip{font-family:'Space Mono',monospace;font-size:9px;padding:3px 9px;border-radius:100px;background:rgba(255,255,255,0.05);color:#5A7A8E;border:1px solid rgba(255,255,255,0.08)}
+.resource-bank{background:#0D1B2A;border-radius:14px;padding:28px 32px;margin-top:48px}
+.resource-bank h3{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:18px}
+.resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.resource-link{display:flex;align-items:center;gap:8px;font-size:12.5px;text-decoration:none;padding:8px 12px;border-radius:7px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);transition:background 0.15s,color 0.15s;line-height:1.4}
+.resource-link span{opacity:0.4;font-size:11px}
+.footer{background:#060e17;padding:16px 48px;font-size:11.5px;color:#2A4A62;border-top:1px solid #0d1b2a}
+@media (max-width:700px){.hero{padding:36px 20px 32px}.jump-nav{padding:0 16px}.body-wrap{padding:36px 16px 60px}.nav-links{display:none}.sub-sections{grid-template-columns:1fr}}
+
+    .nav-back:hover{color:#F59E0B}
+    .nav-links a.active{color:#F59E0B;background:rgba(245,158,11,0.1)}
+    .hero::before{background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,transparent 70%)}
+    .hero-eyebrow{color:#F59E0B}
+    .hero-tag{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);color:#F59E0B}
+    .jump-nav a:hover,.jump-nav a.active{color:#F59E0B;border-color:#F59E0B}
+    .disease-header{border-bottom:2px solid #F59E0B}
+    .disease-icon{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2)}
+    .hero-sub{color:rgba(245,158,11,0.75)}
+    .acc-chip{background:rgba(245,158,11,0.07);color:#F59E0B;border:1px solid rgba(245,158,11,0.18)}
+    .acc-resource{color:#7AABCC}.acc-resource:hover{background:rgba(245,158,11,0.1);color:#F59E0B}
+    .resource-bank h3{color:#F59E0B}
+    </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-back">← Cases</a>
+  <div class="nav-divider"></div>
+  <a href="../../index.html" class="nav-logo">Learning<span>Nuclear</span>Medicine</a>
+  <ul class="nav-links"><li><a href="fdg.html">FDG</a></li><li><a href="dotatate.html" class="active">DOTATATE</a></li><li><a href="psma.html">PSMA</a></li><li><a href="brain.html">Brain PET</a></li></ul>
+</nav>
+<div class="hero">
+  <div class="hero-eyebrow">Tracer — DOTATATE PET/CT</div>
+  <h1>⁶⁸Ga-DOTATATE PET/CT Cases</h1>
+  <p class="hero-sub">Somatostatin receptor imaging for neuroendocrine tumors, paraganglioma, and theranostic eligibility. The gatekeeper scan for PRRT.</p>
+  <div class="hero-tags"><span class="hero-tag">Krenning Score</span><span class="hero-tag">PRRT Eligibility</span><span class="hero-tag">Neuroendocrine Tumors</span><span class="hero-tag">Paraganglioma</span><span class="hero-tag">Theranostics</span><span class="hero-tag">Flip-Flop Phenomenon</span></div>
+</div>
+<div class="jump-nav"><a href="#net">Neuroendocrine Tumors</a><a href="#paraganglioma">Paraganglioma & Pheo</a><a href="#theranostics">Theranostics</a><a href="#variants">Normal Variants</a></div>
+<div class="body-wrap">
+
+  <div class="disease-section" id="net">
+    <div class="disease-header">
+      <div class="disease-icon">🟡</div>
+      <div class="disease-title">Neuroendocrine Tumors</div>
+    </div>
+    <p class='disease-desc'>Well-differentiated NETs overexpress somatostatin receptors 2 and 5, making DOTATATE PET highly sensitive. Krenning scoring at each lesion site determines PRRT eligibility.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Ileal NET — Staging & PRRT Eligibility</div>
+      <div class="topic-chips"><span class="chip acc-chip">Carcinoid syndrome</span><span class="chip acc-chip">Mesenteric desmoplastic reaction</span><span class="chip acc-chip">Hepatic metastases</span><span class="chip acc-chip">Krenning scoring</span><span class="chip acc-chip">PRRT eligibility</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Pancreatic NET</div>
+      <div class="topic-chips"><span class="chip acc-chip">Insulinoma — often DOTATATE-negative</span><span class="chip acc-chip">Non-functioning pNET</span><span class="chip acc-chip">Uncinate vs pathologic mass</span><span class="chip acc-chip">Surgical planning</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Pulmonary & Other NETs</div>
+      <div class="topic-chips"><span class="chip acc-chip">Typical vs atypical carcinoid</span><span class="chip acc-chip">Bronchial carcinoid</span><span class="chip acc-chip">Thymic NET</span><span class="chip acc-chip">Unknown primary NET</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Grade & DOTATATE Avidity</div>
+      <div class="topic-chips"><span class="chip acc-chip">G1 — highest avidity</span><span class="chip acc-chip">G2 — variable</span><span class="chip acc-chip">G3 — often negative</span><span class="chip acc-chip">Ki-67 correlation</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">NET Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Uncinate process — intense physiologic uptake</span><span class="pitfall-chip">Pituitary gland — always intense</span><span class="pitfall-chip">Adrenal glands</span><span class="pitfall-chip">Accessory spleen</span><span class="pitfall-chip">Spleen as reference — NEVER use</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="paraganglioma">
+    <div class="disease-header">
+      <div class="disease-icon">⚡</div>
+      <div class="disease-title">Paraganglioma & Pheochromocytoma</div>
+    </div>
+    <p class='disease-desc'>DOTATATE PET is highly sensitive for SDHB/SDHD-related paragangliomas and head & neck paragangliomas. Superior to MIBG for many subtypes.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Head & Neck Paraganglioma</div>
+      <div class="topic-chips"><span class="chip acc-chip">Carotid body tumor</span><span class="chip acc-chip">Jugulotympanic</span><span class="chip acc-chip">Vagal paraganglioma</span><span class="chip acc-chip">Bilateral disease</span><span class="chip acc-chip">SDH mutations</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Adrenal Pheochromocytoma</div>
+      <div class="topic-chips"><span class="chip acc-chip">Unilateral vs bilateral</span><span class="chip acc-chip">MEN2A association</span><span class="chip acc-chip">VHL-related</span><span class="chip acc-chip">DOTATATE vs MIBG comparison</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Extra-Adrenal & Metastatic</div>
+      <div class="topic-chips"><span class="chip acc-chip">Retroperitoneal paraganglioma</span><span class="chip acc-chip">Organ of Zuckerkandl</span><span class="chip acc-chip">Metastatic disease</span><span class="chip acc-chip">Theranostic planning</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Paraganglioma Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Normal adrenal medulla uptake</span><span class="pitfall-chip">Lymph node vs paraganglioma</span><span class="pitfall-chip">MIBG-positive DOTATATE-negative variants</span><span class="pitfall-chip">Accessory spleen mimicry</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="theranostics">
+    <div class="disease-header">
+      <div class="disease-icon">☢️</div>
+      <div class="disease-title">Theranostics — Before & After Lu-177 DOTATATE</div>
+    </div>
+    <p class='disease-desc'>DOTATATE PET is the gatekeeper for PRRT. All sites of disease must demonstrate Krenning ≥4 uptake. Before/after pairs illustrate treatment response.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Pre-PRRT Eligibility Assessment</div>
+      <div class="topic-chips"><span class="chip acc-chip">Krenning score per site</span><span class="chip acc-chip">Liver reference standard</span><span class="chip acc-chip">All lesions must be ≥4</span><span class="chip acc-chip">NETTER-1 eligibility criteria</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Post-PRRT Response Assessment</div>
+      <div class="topic-chips"><span class="chip acc-chip">SUV reduction</span><span class="chip acc-chip">New lesions</span><span class="chip acc-chip">Mixed response</span><span class="chip acc-chip">When to re-treat</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Flip-Flop Phenomenon</div>
+      <div class="topic-chips"><span class="chip acc-chip">G1→G3 dedifferentiation</span><span class="chip acc-chip">DOTATATE-negative FDG-avid</span><span class="chip acc-chip">Both tracers needed</span><span class="chip acc-chip">Rebiopsy before changing management</span></div>
+    </div></div>
+    <div class="pitfall-card">
+      <div class="pitfall-label">⚠️ Pitfalls &amp; Normal Variants — Cases Coming Soon</div>
+      <div class="pitfall-title">Theranostics Pitfalls</div>
+      <div class="pitfall-chips"><span class="pitfall-chip">Spleen as reference — always use liver</span><span class="pitfall-chip">Single low-Krenning lesion excludes PRRT</span><span class="pitfall-chip">Post-PRRT stunning</span><span class="pitfall-chip">Pseudo-progression on early post-therapy scan</span></div>
+    </div>
+  </div>
+  <div class="disease-section" id="variants">
+    <div class="disease-header">
+      <div class="disease-icon">⚠️</div>
+      <div class="disease-title">Normal Variants & Pitfalls</div>
+    </div>
+    <p class='disease-desc'>DOTATATE has intense physiologic uptake in multiple organs. Knowing these patterns is essential before reading any case.</p>
+    <div class="sub-sections"><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Physiologic Uptake — High Intensity</div>
+      <div class="topic-chips"><span class="chip acc-chip">Spleen — highest of all organs</span><span class="chip acc-chip">Kidneys</span><span class="chip acc-chip">Adrenal glands</span><span class="chip acc-chip">Pituitary gland</span><span class="chip acc-chip">Liver — use as reference</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Physiologic Uptake — Variable</div>
+      <div class="topic-chips"><span class="chip acc-chip">Uncinate process of pancreas</span><span class="chip acc-chip">Thyroid gland</span><span class="chip acc-chip">Salivary glands</span><span class="chip acc-chip">Bowel — variable</span></div>
+    </div><div class="sub-card">
+      <div class="sub-label">Cases Coming Soon</div>
+      <div class="sub-title">Benign Lesions with Uptake</div>
+      <div class="topic-chips"><span class="chip acc-chip">Meningioma</span><span class="chip acc-chip">Accessory spleen</span><span class="chip acc-chip">Breast tissue</span><span class="chip acc-chip">Inflammation</span></div>
+    </div></div>
+    
+  </div>
+  <div class="resource-bank">
+    <h3>Key References &amp; Resources</h3>
+    <div class="resource-grid"><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1607427" target="_blank" class="resource-link acc-resource">NETTER-1 Trial — Lu-177 DOTATATE <span>↗</span></a><a href="https://jnm.snmjournals.org/content/61/2/222" target="_blank" class="resource-link acc-resource">SNMMI Patient Selection for PRRT <span>↗</span></a><a href="https://radiopaedia.org/articles/gallium-68-dotatate-pet-scan" target="_blank" class="resource-link acc-resource">Radiopaedia — Ga-68 DOTATATE PET <span>↗</span></a><a href="https://radiopaedia.org/articles/krenning-score" target="_blank" class="resource-link acc-resource">Radiopaedia — Krenning Score <span>↗</span></a><a href="https://www.nanets.net/guidelines" target="_blank" class="resource-link acc-resource">NANETS Guidelines — NETs <span>↗</span></a></div>
+  </div>
+</div>
+<div class="footer">LearningNuclearMedicine.com &nbsp;·&nbsp; ⁶⁸Ga-DOTATATE PET/CT Cases &nbsp;·&nbsp; For educational use only &nbsp;·&nbsp; © 2025</div>
+<script>
+const sections=document.querySelectorAll('.disease-section');
+const jumpLinks=document.querySelectorAll('.jump-nav a');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){jumpLinks.forEach(l=>l.classList.remove('active'));const a=document.querySelector(`.jump-nav a[href="#${e.target.id}"]`);if(a)a.classList.add('active')}})},{threshold:0.2});
+sections.forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>
